@@ -16,13 +16,17 @@ int switchboard(char *opcode, int line_num, stack_t **stack)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		{"pop", pop}
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add}
 	};
 	int counter = 0;
 
-	while (counter < 4)
+	while (counter < 6)
 	{
-		if (strcmp(list[counter].opcode, opcode) == 0)
+		if (strcmp("nop", opcode) == 0)
+				;
+		else if (strcmp(list[counter].opcode, opcode) == 0)
 		{
 			list[counter].f(stack, line_num);
 			return (0);
