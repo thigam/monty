@@ -3,8 +3,9 @@
 /**
  * switchboard- Selects and calls the corresponding function based on opcode
  * @opcode: The string represent the required operation
- * @par: The parameter
- * @stack: A pointer to the pointer to the first element in the doubly linked list
+ * @line_num: The current line number of the source file
+ * @stack: A pointer to the pointer to the first element
+ * in the doubly linked list
  *
  * Return: 0 if successful, -1 if no correspodning function is found
  */
