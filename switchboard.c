@@ -14,11 +14,12 @@ int switchboard(char *opcode, int line_num, stack_t **stack)
 {
 	instruction_t list[] = {
 		{"push", push},
-		{"pall", pall}
+		{"pall", pall},
+		{"pint", pint}
 	};
 	int counter = 0;
 
-	while (counter < 2)
+	while (counter < 3)
 	{
 		if (strcmp(list[counter].opcode, opcode) == 0)
 		{
