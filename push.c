@@ -4,6 +4,7 @@
  * push- Adds an element to the beginning of the 'stack'
  * @stack: A pointer to the pointer to the stack's first element
  * @line_number: The integer to be held in the new element
+ * @par: Parameter
  *
  * Return: nothing
  */

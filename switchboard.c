@@ -5,6 +5,7 @@
  * @opcode: The string represent the required operation
  * @line_num: The current line number of the source file
  * @stack: A pointer to the pointer to the first element
+ * @par: Parameter
  * in the doubly linked list
  *
  * Return: 0 if successful, -1 if no correspodning function is found
