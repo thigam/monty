@@ -23,6 +23,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	if (holder->next == NULL)
 	{
 		(*stack) = NULL;
+		free(holder);
 	}
 	else
 	{
