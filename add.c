@@ -25,6 +25,8 @@ void add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	holder->n = holder->n + holder->next->n;
-	holder->next = holder->next->next;
+	holder->next->n = holder->n + holder->next->n;
+	holder->next->prev = NULL;
+	(*stack) = holder->next;
+	free(holder);
 }
