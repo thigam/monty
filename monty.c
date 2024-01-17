@@ -41,8 +41,12 @@ int main(int argc, char *argv[])
 		if (switchboard(opcode, line_num, &stack) == -1)
 		{
 			fprintf(stderr, "L%d: unkown instruction %s\n", line_num, opcode);
+			fclose(file);
+			exit(EXIT_FAILURE);
 		}
 	}
+
+	fclose(file);
 
 	return (0);
 }
