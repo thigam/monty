@@ -18,11 +18,13 @@ int switchboard(char *opcode, int line_num, stack_t **stack, char *par)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
-		{"add", add}
+		{"add", add},
+		{"sub", sub},
+		{"div", _div}
 	};
 	int counter = 0;
 
-	while (counter < 6)
+	while (counter < 7)
 	{
 		if (strcmp("nop", opcode) == 0)
 			return (0);
