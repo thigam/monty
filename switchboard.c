@@ -10,10 +10,9 @@
  * Return: 0 if successful, -1 if no correspodning function is found
  */
 
-int switchboard(char *opcode, int line_num, stack_t **stack)
+int switchboard(char *opcode, int line_num, stack_t **stack, char *par)
 {
 	instruction_t list[] = {
-		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
@@ -25,6 +24,11 @@ int switchboard(char *opcode, int line_num, stack_t **stack)
 	while (counter < 6)
 	{
 		if (strcmp("nop", opcode) == 0);
+		else if (strcmp("push", opcode) == 0)
+		{
+			push(stack, line_num, par);
+			return (0);
+		}
 		else if (strcmp(list[counter].opcode, opcode) == 0)
 		{
 			list[counter].f(stack, line_num);

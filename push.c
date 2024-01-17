@@ -8,7 +8,7 @@
  * Return: nothing
  */
 
-void push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number, char *par)
 {
 	stack_t *holder;
 	stack_t *new;

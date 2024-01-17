@@ -1,7 +1,5 @@
 #include "monty.h"
 
-char *par;
-
 /**
  * main- Executes monty code instructions
  * @argc: Number of command line arguments
@@ -15,7 +13,7 @@ int main(int argc, char *argv[])
 	FILE *file;
 	char buffer[100];
 	/*size_t getline_value = 0;*/
-	char *opcode;
+	char *opcode, *par;
 	int line_num = 0;
 	stack_t *stack = NULL;
 
@@ -39,7 +37,7 @@ int main(int argc, char *argv[])
 		opcode = strtok(buffer, " \n");
 		par = strtok(NULL, " \n");
 
-		if (switchboard(opcode, line_num, &stack) == -1)
+		if (switchboard(opcode, line_num, &stack, par) == -1)
 		{
 			fprintf(stderr, "L%d: unkown instruction %s\n", line_num, opcode);
 			fclose(file);
