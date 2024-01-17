@@ -23,7 +23,8 @@ int switchboard(char *opcode, int line_num, stack_t **stack, char *par)
 
 	while (counter < 6)
 	{
-		if (strcmp("nop", opcode) == 0);
+		if (strcmp("nop", opcode) == 0)
+			;
 		else if (strcmp("push", opcode) == 0)
 		{
 			push(stack, line_num, par);
