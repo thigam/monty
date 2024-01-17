@@ -38,6 +38,7 @@ typedef struct instruction_s
 } instruction_t;
 
 int switchboard(char *opcode, int line_num, stack_t **stack);
+void free_stack(stack_t **stack);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
